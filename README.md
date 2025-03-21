@@ -1,77 +1,79 @@
-/* styles/History.module.css */
-.historyPage {
-  width: 100%;
-}
+# Fitness Tracker - Next.js Application
 
-.historyPage h1 {
-  margin-bottom: 2rem;
-}
+A comprehensive fitness tracking application built with Next.js, TypeScript, and CSS Modules.
 
-.filters {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
+## Features
 
-.filterGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  flex: 1;
-  min-width: 200px;
-}
+- **Dashboard**: View your recent workouts and quick statistics
+- **Exercise Tracking**: Add, edit, and delete exercises with details like sets, reps, and weight
+- **Workout History**: Filter and search through your past workouts
+- **Responsive Design**: Works on mobile, tablet, and desktop
+- **Local Storage**: Save your workout data in the browser
 
-.filterGroup label {
-  font-weight: 500;
-  color: var(--text-light);
-}
+## Tech Stack
 
-.select,
-.searchInput {
-  padding: 0.75rem;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  background-color: var(--card-background);
-}
+- **Next.js**: React framework for building the application
+- **TypeScript**: For type safety and better developer experience
+- **CSS Modules**: For component-scoped styling
+- **Local Storage**: For persisting user data
 
-.searchInput {
-  width: 100%;
-}
+## Getting Started
 
-.select {
-  width: 100%;
-}
+### Prerequisites
 
-.resultCount {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin-bottom: 1rem;
-}
+- Node.js 14.x or later
+- npm or yarn
 
-.results {
-  width: 100%;
-}
+### Installation
 
-.emptyState {
-  text-align: center;
-  padding: 3rem;
-  background-color: var(--card-background);
-  border-radius: 8px;
-  box-shadow: 0 2px 8px var(--shadow-color);
-}
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/fitness-tracker.git
+   cd fitness-tracker
+   ```
 
-.emptyState h3 {
-  margin-bottom: 1rem;
-}
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-.emptyStateMessage {
-  color: var(--text-light);
-  margin-bottom: 1.5rem;
-}
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
 
-@media (max-width: 768px) {
-  .filterGroup {
-    min-width: 100%;
-  }
-}
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Project Structure
+
+The project is structured as follows:
+
+- `/app`: Next.js application directory
+  - `/components`: React components organized by feature
+  - `/pages`: Next.js pages
+  - `/styles`: Global and page-specific CSS
+  - `/types`: TypeScript type definitions
+  - `/utils`: Utility functions
+
+## Usage
+
+1. **Adding a Workout**: Click "Add Exercise" on the dashboard, fill out the form, and submit.
+2. **Viewing History**: Navigate to the History page to see all your past workouts.
+3. **Filtering**: Use the filters on the History page to find specific workouts or exercises.
+4. **Editing/Deleting**: Expand any exercise entry to edit or delete it.
+
+## Future Enhancements
+
+- User authentication
+- Workout plans and routines
+- Progress charts and analytics
+- Social sharing features
+- Export/import functionality for backup
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
