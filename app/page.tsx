@@ -28,7 +28,7 @@ export default function Home() {
             <div className="heroImageContainer">
               <div className="heroImageWrapper">
                 <Image
-                  src="/images/fitness-hero.png"
+                  src="https://img.freepik.com/free-vector/blue-geometric-woman-running-illustration_1284-52845.jpg?t=st=1742724772~exp=1742728372~hmac=5d210774e87c698f1f3dedb1ddcf956a8fddc14e9ef1c3763f7f3b90acacfc9f&w=826"
                   alt="Fitness Tracking"
                   width={500}
                   height={500}
