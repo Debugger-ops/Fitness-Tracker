@@ -1,10 +1,48 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import './page.css';
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="container">
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="navContainer">
+          <Link href="/" className="logoContainer">
+            <div className="logo">
+              <svg className="logoIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 20V14M4 14V8M4 14H12M4 8V2M4 8H8M12 14H20M12 14V8M12 14V20M20 14V8M20 14V20M20 8V2M20 8H16" 
+                  stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="logoText">FitTrack</span>
+            </div>
+          </Link>
+          
+          <div className="menuToggle" onClick={toggleMenu}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          
+          <div className={`navLinks ${isMenuOpen ? 'active' : ''}`}>
+            <Link href="/" className="navLink active">Home</Link>
+            <Link href="/dashboard" className="navLink">Dashboard</Link>
+            <Link href="/history" className="navLink">History</Link>
+            <Link href="#" className="navLink">Features</Link>
+            <Link href="#" className="navLink">About</Link>
+            <Link href="/dashboard" className="navButton">Get Started</Link>
+          </div>
+        </div>
+      </nav>
+
       {/* Hero Section */}
       <section className="heroSection">
         <div className="heroContainer">
@@ -216,7 +254,13 @@ export default function Home() {
       <footer className="footer">
         <div className="footerContainer">
           <div className="footerLogo">
-            <h3>Fitness Tracker</h3>
+            <div className="logo">
+              <svg className="logoIcon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 20V14M4 14V8M4 14H12M4 8V2M4 8H8M12 14H20M12 14V8M12 14V20M20 14V8M20 14V20M20 8V2M20 8H16" 
+                  stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+              <span className="logoText">FitTrack</span>
+            </div>
           </div>
           <div className="footerLinks">
             <div className="footerLinkGroup">
@@ -246,7 +290,7 @@ export default function Home() {
           </div>
         </div>
         <div className="footerBottom">
-          <p>© {new Date().getFullYear()} Fitness Tracker. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FitTrack. All rights reserved.</p>
         </div>
       </footer>
     </div>
