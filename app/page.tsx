@@ -1,40 +1,40 @@
 // app/page.tsx
 import Link from 'next/link';
 import Image from 'next/image';
-import styles from './page.module.css';
+import './page.css';  // Regular CSS import
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="container">
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroContainer}>
-          <div className={styles.heroContent}>
-            <div className={styles.heroTextContent}>
-              <h1 className={styles.heroTitle}>
+      <section className="heroSection">
+        <div className="heroContainer">
+          <div className="heroContent">
+            <div className="heroTextContent">
+              <h1 className="heroTitle">
                 Track Your Fitness Journey
               </h1>
-              <p className={styles.heroDescription}>
+              <p className="heroDescription">
                 Log your workouts, monitor progress, and achieve your fitness goals with our comprehensive tracking solution.
               </p>
-              <div className={styles.heroButtons}>
-                <Link href="/dashboard" className={styles.primaryButton}>
+              <div className="heroButtons">
+                <Link href="/dashboard" className="primaryButton">
                   Get Started
                 </Link>
-                <Link href="/history" className={styles.secondaryButton}>
+                <Link href="/history" className="secondaryButton">
                   View History
                 </Link>
               </div>
             </div>
-            <div className={styles.heroImageContainer}>
-              <div className={styles.heroImageWrapper}>
-                {/* Replace with a real placeholder service or local image */}
-                <Image 
-                  src="https://placehold.co/500x500/3b82f6/FFFFFF?text=Fitness+Tracker"
-                  alt="Fitness Tracking" 
-                  fill
-                  style={{objectFit: "contain"}}
-                  className={styles.heroImage}
+            <div className="heroImageContainer">
+              <div className="heroImageWrapper">
+                {/* Using local image to avoid domain configuration issues */}
+                <Image
+                  src="https://img.freepik.com/free-vector/blue-geometric-woman-running-illustration_1284-52845.jpg?t=st=1742724772~exp=1742728372~hmac=5d210774e87c698f1f3dedb1ddcf956a8fddc14e9ef1c3763f7f3b90acacfc9f&w=826"
+                  alt="Fitness Tracking"
+                  width={500}
+                  height={500}
+                  className="heroImage"
                   priority
                 />
               </div>
@@ -42,7 +42,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-
+      
       {/* Rest of the component remains the same */}
       {/* ... */}
     </div>
