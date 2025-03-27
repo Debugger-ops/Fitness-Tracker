@@ -36,8 +36,8 @@ export default function Home() {
             <Link href="/" className="navLink active">Home</Link>
             <Link href="/dashboard" className="navLink">Dashboard</Link>
             <Link href="/history" className="navLink">History</Link>
-            <Link href="#" className="navLink">Features</Link>
-            <Link href="#" className="navLink">About</Link>
+            <Link href="/features" className="navLink">Features</Link>
+            <Link href="/about" className="navLink">About</Link>
             <Link href="/dashboard" className="navButton">Get Started</Link>
           </div>
         </div>
@@ -61,6 +61,8 @@ export default function Home() {
                 <Link href="/history" className="secondaryButton">
                   View History
                 </Link>
+                <Link href="/features"></Link>
+                <Link href="./about"></Link>
               </div>
             </div>
             <div className="heroImageContainer">
@@ -268,7 +270,8 @@ export default function Home() {
               <ul>
                 <li><Link href="/dashboard">Dashboard</Link></li>
                 <li><Link href="/history">History</Link></li>
-                <li><Link href="#">Features</Link></li>
+                <li><Link href="/features">Features</Link></li>
+                <li><Link href="/about">About</Link></li>
               </ul>
             </div>
             <div className="footerLinkGroup">
