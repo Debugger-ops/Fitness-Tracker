@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      {/* Navbar */}
+
       <nav className="navbar">
         <div className="navContainer">
           <Link href="/" className="logoContainer">
@@ -52,7 +52,7 @@ export default function Home() {
                 Track Your Fitness Journey
               </h1>
               <p className="heroDescription">
-                Log your workouts, monitor progress, and achieve your fitness goals with our comprehensive tracking solution.
+                Log your workouts monitor progress, and achieve your fitness goals with our comprehensive tracking solution.
               </p>
               <div className="heroButtons">
                 <Link href="/dashboard" className="primaryButton">
@@ -189,9 +189,8 @@ export default function Home() {
           
           <div className="testimonialsGrid">
             <div className="testimonialCard">
-              <div className="quoteMark">"</div>
               <p className="testimonialText">
-                This app has transformed my workout routine. I can easily track my progress and see how far I've come.
+                This app has transformed my workout routine. I can easily track my progress and see how far I have come.
               </p>
               <div className="testimonialAuthor">
                 <div className="authorAvatar">
@@ -205,9 +204,8 @@ export default function Home() {
             </div>
             
             <div className="testimonialCard">
-              <div className="quoteMark">"</div>
               <p className="testimonialText">
-                As a personal trainer, I recommend this app to all my clients. It's simple yet comprehensive.
+                As a personal trainer I recommend this app to all my clients. It is simple yet comprehensive.
               </p>
               <div className="testimonialAuthor">
                 <div className="authorAvatar">
@@ -221,7 +219,7 @@ export default function Home() {
             </div>
             
             <div className="testimonialCard">
-              <div className="quoteMark">"</div>
+             
               <p className="testimonialText">
                 I love how I can see my workout history and track my improvements over time. Highly recommended!
               </p>
