@@ -1,0 +1,194 @@
+:root {
+    /* Primary Color Palette */
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #9b59b6;
+    
+    /* Text Colors */
+    --text-color: #2c3e50;
+    --light-text-color: #7f8c8d;
+    
+    /* Background Colors */
+    --background-color: #f9fafb;
+    --card-background: #ffffff;
+    
+    /* Design Tokens */
+    --border-radius: 12px;
+    --gradient-primary: linear-gradient(135deg, #3498db, #2ecc71);
+    --gradient-secondary: linear-gradient(135deg, #9b59b6, #3498db);
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --box-shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+    --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .about-page {
+    min-height: 100vh;
+    background: var(--background-color);
+  }
+  
+  .about-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  .about-hero {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 3rem 1rem;
+    background: var(--gradient-secondary);
+    color: white;
+    border-radius: var(--border-radius);
+  }
+  
+  .about-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 800;
+    color: white;
+  }
+  
+  .about-hero p {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.9;
+  }
+  
+  .about-mission, .about-team {
+    margin-bottom: 4rem;
+  }
+  
+  .about-mission h2, .about-team h2 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    position: relative;
+    display: inline-block;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .about-mission h2::after, .about-team h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+  
+  .about-mission p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    color: var(--light-text-color);
+    line-height: 1.6;
+    font-size: 1.1rem;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .team-member {
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .team-member:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  .member-avatar {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--gradient-primary);
+    color: white;
+    transition: var(--transition);
+  }
+  
+  .team-member:hover .member-avatar {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .team-member h3 {
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+  }
+  
+  .team-member:hover h3 {
+    color: var(--primary-color);
+  }
+  
+  .team-member p {
+    color: var(--light-text-color);
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .about-hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .about-hero p {
+      font-size: 1rem;
+    }
+  
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .member-avatar {
+      width: 100px;
+      height: 100px;
+      font-size: 3rem;
+    }
+  }
+  
+  /* Print Styles */
+  @media print {
+    .about-page {
+      background: white;
+    }
+  
+    .about-hero {
+      background: none;
+      color: black;
+    }
+  
+    .team-member {
+      border: 1px solid #ddd;
+      box-shadow: none;
+    }
+  }
